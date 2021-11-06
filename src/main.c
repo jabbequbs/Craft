@@ -1,4 +1,5 @@
-#include <GL/glew.h>
+#include <glad/gl.h>
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include <curl/curl.h>
 #include <math.h>
@@ -2607,9 +2608,7 @@ int main(int argc, char **argv) {
     glfwSetMouseButtonCallback(g->window, on_mouse_button);
     glfwSetScrollCallback(g->window, on_scroll);
 
-    if (glewInit() != GLEW_OK) {
-        return -1;
-    }
+    gladLoadGL(glfwGetProcAddress);
 
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);

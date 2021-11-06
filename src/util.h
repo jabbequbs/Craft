@@ -1,7 +1,8 @@
 #ifndef _util_h_
 #define _util_h_
 
-#include <GL/glew.h>
+#include <glad/gl.h>
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include "config.h"
 
